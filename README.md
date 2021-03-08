@@ -1,5 +1,4 @@
 # StylizedCulling_ShaderFunction
-=================================
 
 A vertex shader function that culls meshes with squash/Stretch based on their distance  to the player.
 
@@ -18,6 +17,7 @@ How to Use
 
 Just plug this node in any of your shader
 
+![node](https://user-images.githubusercontent.com/39376613/110271595-5dc5d400-7f96-11eb-85b5-ce54278eb55b.png)
 
 
 
