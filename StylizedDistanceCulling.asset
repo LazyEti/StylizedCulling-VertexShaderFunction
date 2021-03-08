@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: StylizedDistanceCulling
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18400\n0;0;1920;1139;2385.178;843.2303;1.38171;False;False\nNode;AmplifyShaderEditor.CommentaryNode;35;-1238.969,-618.9982;Inherit;False;567.3613;238.1728;;4;20;1;18;21;Culling
+    Params;1,0.8775733,0.4669811,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;32;-1832.81,-170.8661;Inherit;False;407.7262;247.464;;2;33;2;Player
+    Pos (Camera);1,0.8472502,0.5613208,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;31;-1409.892,41.29006;Inherit;False;946.0131;566.7706;;14;57;59;56;8;10;16;58;6;7;37;36;54;4;5;Squash
+    And Stretch;1,0.695386,0.5613208,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;30;-1407.419,-314.0601;Inherit;False;1346.955;315.148;;9;53;14;28;13;15;9;3;27;17;Distance
+    Mask X-Z;0.3632075,0.6556041,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;29;-445.9028,90.69124;Inherit;False;359.4135;302.0162;;3;55;19;11;Blending;0.9718068,0.5707547,1,1;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;59;-1319.917,452.4599;Inherit;False;Constant;_MaxOld;MaxOld;2;0;Create;True;0;0;False;0;False;0.9;1;1;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;57;-1318.917,521.46;Inherit;False;Constant;_MaxNew;MaxNew;2;0;Create;True;0;0;False;0;False;1.5;1;1;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;21;-877.83,-573.7897;Inherit;False;CullHardness;1;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;18;-1214.117,-475.2805;Inherit;False;Property;_CullDistance;CullDistance;1;0;Create;True;0;0;False;0;False;60;60;0.1;100;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;1;-1146.482,-572.7967;Inherit;False;Property;_CullHardness;CullHardness;0;0;Create;True;0;0;False;0;False;1;50;1;100;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;20;-952.6359,-474.7876;Inherit;False;CullDistance;1;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ObjectToWorldTransfNode;3;-1377.726,-257.7899;Inherit;False;1;0;FLOAT4;0,0,0,1;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ComponentMaskNode;27;-1160.965,-178.7674;Inherit;False;True;False;True;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ClampOpNode;5;-979.8091,96.00199;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;-1;False;2;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DistanceOpNode;9;-948.0774,-173.4559;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;15;-516.5706,-174.8397;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;13;-784.8794,-173.5049;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ComponentMaskNode;28;-1158.809,-94.02451;Inherit;False;True;False;True;False;1;0;FLOAT3;0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SaturateNode;17;-379.7855,-176.1783;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;19;-436.02,200.7526;Inherit;False;VertexOffset;3;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;16;-781.6498,331.7957;Inherit;False;FLOAT3;4;0;FLOAT;-1;False;1;FLOAT;-1;False;2;FLOAT;-1;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.PowerNode;14;-653.5706,-174.8398;Inherit;False;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldSpaceCameraPos;2;-1820.811,-90.86612;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionInput;33;-1573.288,-95.66675;Inherit;False;PlayerPos;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CommentaryNode;34;-65.1418,91.73512;Inherit;False;204.9999;161;;1;0;Output;0,1,0.5416808,1;0;0\nNode;AmplifyShaderEditor.GetLocalVarNode;54;-1341.347,82.65247;Inherit;False;53;DistanceMask;1;0;OBJECT;;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;36;-1321.277,228.8255;Inherit;False;Constant;_Max;Max;2;0;Create;True;0;0;False;0;False;1;1;1;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;37;-1331.232,153.2097;Inherit;False;Constant;_Min;Min;2;0;Create;True;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.PosVertexDataNode;10;-803.5551,142.12;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.GetLocalVarNode;55;-435.6252,289.3618;Inherit;False;53;DistanceMask;1;0;OBJECT;;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;11;-238.9426,141.3991;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ClampOpNode;7;-969.1661,355.4485;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;-1;False;2;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;8;-591.6221,140.4595;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.TFHCRemapNode;4;-1159.51,95.59049;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;0.5;False;2;FLOAT;1;False;3;FLOAT;-1;False;4;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TFHCRemapNode;6;-1145.429,355.7853;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;0.45;False;2;FLOAT;0.9;False;3;FLOAT;-1;False;4;FLOAT;1.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;58;-1323.917,381.4599;Inherit;False;Constant;_MinOld;MinOld;2;0;Create;True;0;0;False;0;False;0.45;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.GetLocalVarNode;56;-1339.803,309.1375;Inherit;False;53;DistanceMask;1;0;OBJECT;;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;53;-250.141,-181.4462;Inherit;False;DistanceMask;-1;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;-15.14145,141.735;Inherit;False;True;-1;Culling;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;21;0;1;0\nWireConnection;20;0;18;0\nWireConnection;27;0;3;0\nWireConnection;5;0;4;0\nWireConnection;9;0;27;0\nWireConnection;9;1;28;0\nWireConnection;15;0;14;0\nWireConnection;13;0;9;0\nWireConnection;13;1;20;0\nWireConnection;28;0;33;0\nWireConnection;17;0;15;0\nWireConnection;16;0;5;0\nWireConnection;16;1;7;0\nWireConnection;16;2;5;0\nWireConnection;14;0;13;0\nWireConnection;14;1;21;0\nWireConnection;33;0;2;0\nWireConnection;11;0;8;0\nWireConnection;11;1;19;0\nWireConnection;11;2;55;0\nWireConnection;7;0;6;0\nWireConnection;8;0;10;0\nWireConnection;8;1;16;0\nWireConnection;4;0;54;0\nWireConnection;4;1;37;0\nWireConnection;4;2;36;0\nWireConnection;4;4;36;0\nWireConnection;6;0;56;0\nWireConnection;6;1;58;0\nWireConnection;6;2;59;0\nWireConnection;6;4;57;0\nWireConnection;53;0;17;0\nWireConnection;0;0;11;0\nASEEND*/\n//CHKSM=102F5AE7D7AB6F79F220F795C175AC20E1CD6816"
+  m_functionName: 
+  m_description: 'A vertex shader function that culls meshes with a customizable
+    squash/Stretch based on their distance  to the player.
+
+
+    @LazyEti 2020'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 3
+  m_customNodeCategory: 
+  m_previewPosition: 0
+  m_hidden: 0
